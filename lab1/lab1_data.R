@@ -1,8 +1,12 @@
+
+library(readxl)
 EPI_data <- read.csv("./2010EPI_data.csv", skip = 1, header = TRUE)
 #or
-#EPI_data <- read.xlsx(”./2010EPI_data.xlsx")
+EPI_data_xl <- read_xls("./2010EPI_data.xls", sheet = 4)
+
 # Note: replace default data frame name – cannot start with numbers!
 View(EPI_data)
+View(EPI_data_xl)
 #
 attach(EPI_data) 	# sets the ‘default’ object
 fix(EPI_data) 	# launches a simple data editor

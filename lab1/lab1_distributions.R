@@ -1,4 +1,6 @@
 
+library(ggplot2)
+
 
 #Cumulative Density Function
 plot(ecdf(EPI), do.points=FALSE, verticals=TRUE) 
@@ -14,3 +16,12 @@ qqline(x)
 
 help(distributions)
 # try different ones.....
+
+x <- seq(0, 1, length.out = 21)
+y <- seq(0.2, 0.9, length.out = 21)
+dist_x <- dcauchy(x, location = 0, scale = 1, log = FALSE)
+dist_Y <- dcauchy(x, location = 0, scale = 1, log = FALSE)
+data_frame <- data.frame(dist_x, dist_Y)
+
+ggplot(data_frame, aes(x=dist_x)) + geom_density(alpha=.3)
+
