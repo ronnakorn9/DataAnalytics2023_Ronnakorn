@@ -163,3 +163,9 @@ hw3/
 lab2/
 example/
 exercise/
+*/data
+*/.RData
+*/.Rhistory
+*/*.xls
+*/*.csv
+*/*.html

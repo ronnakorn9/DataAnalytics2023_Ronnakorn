@@ -14,14 +14,30 @@ qqnorm(x); qqline(x)
 qqplot(qt(ppoints(250), df = 5), x, xlab = "Q-Q plot for t dsn")
 qqline(x)
 
+
+
+
 help(distributions)
 # try different ones.....
+x <- seq(30,95,1)
+qqplot(qt(ppoints(250), df = 5), x, xlab = "Q-Q plot for t dsn")
+qqline(x)
 
-x <- seq(0, 1, length.out = 21)
-y <- seq(0.2, 0.9, length.out = 21)
-dist_x <- dcauchy(x, location = 0, scale = 1, log = FALSE)
-dist_Y <- dcauchy(x, location = 0, scale = 1, log = FALSE)
-data_frame <- data.frame(dist_x, dist_Y)
+x <- seq(30,96,1)
+qqplot(qt(ppoints(250), df = 5), x, xlab = "Q-Q plot for t dsn")
+qqline(x)
 
-ggplot(data_frame, aes(x=dist_x)) + geom_density(alpha=.3)
+x <- seq(30,96,2)
+qqplot(qt(ppoints(250), df = 5), x, xlab = "Q-Q plot for t dsn")
+qqline(x)
 
+
+
+# x <- seq(0, 1, length.out = 21)
+# y <- seq(0.2, 0.9, length.out = 21)
+# dist_x <- dcauchy(x, location = 0, scale = 1, log = FALSE)
+# dist_y <- dcauchy(x, location = 0, scale = 1, log = FALSE)
+# data_frame <- data.frame(dist_x, dist_Y)
+# 
+# ggplot(data_frame, aes(x=dist_x)) + geom_density(alpha=.3)
+# ggplot(data_frame, aes(x=dist_y)) + geom_density(alpha=.3)
