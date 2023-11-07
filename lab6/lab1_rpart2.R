@@ -12,7 +12,7 @@ par(mfrow=c(1,3))
 plot(fitM, uniform=TRUE, main="Regression Tree for Mileage ")
 text(fitM, use.n=TRUE, all=TRUE, cex=.8)
 
-# prune the tree
+# prune the tree (pruning wass too weak)
 pfitM<- prune(fitM, cp=0.01160389) # from cptable??? adjust this to see the effect
 # plot the pruned tree
 plot(pfitM, uniform=TRUE, main="Pruned Regression Tree for Mileage")
