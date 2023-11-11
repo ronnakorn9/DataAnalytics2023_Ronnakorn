@@ -4,7 +4,8 @@ data(prostate)
 metaPC <- MetaPCA(prostate, method="Eigen", doPreprocess=FALSE, .scale=TRUE)
 metaPC <- MetaPCA(prostate, method="Angle", doPreprocess=FALSE)
 metaPC <- MetaPCA(prostate, method="RobustAngle", doPreprocess=FALSE)
-metaPC <- MetaPCA(prostate, method="SparseAngle", doPreprocess=FALSE,iter=100)
+# metaPC <- MetaPCA(prostate, method="SparseAngle", doPreprocess=FALSE,iter=100) # there's no iter argument
+metaPC <- MetaPCA(prostate, method="SparseAngle", doPreprocess=FALSE)
 #Plotting 4 data in the same space!
 coord <- foreach(dd=iter(metaPC$x), .combine=rbind) %do% dd$coord
 PlotPC2D(coord[,1:2], drawEllipse=F, dataset.name="Prostate", .class.order=c("Metastasis","Primary","Normal"), 
