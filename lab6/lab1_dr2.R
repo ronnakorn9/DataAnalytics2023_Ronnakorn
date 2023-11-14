@@ -1,3 +1,5 @@
+library(MetaPCA)
+library(iterators)
 #4 prostate cancer data which have three classes: normal, primary, metastasis
 data(prostate)
 #There are currently 4 meta-pca methods. Run either one of following four.

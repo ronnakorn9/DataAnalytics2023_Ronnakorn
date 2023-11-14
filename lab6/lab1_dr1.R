@@ -4,6 +4,8 @@
 
 # install.packages("MetaPCA")
 library(MetaPCA)
+library(iterators)
+
 #Spellman, 1998 Yeast cell cycle data set
 #Consider each synchronization method as a separate data
 data(Spellman) 

@@ -14,3 +14,5 @@ summary(s3<- update(s1,method="phdres"))
 summary(s4 <- update(s1,method="ire"))
 # fit using Sex as a grouping variable.  
 s5 <- update(s4,group=~Sex)
+
+s5
