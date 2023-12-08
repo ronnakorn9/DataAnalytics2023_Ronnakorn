@@ -160,9 +160,16 @@ cython_debug/
 #.idea/
 
 hw3/
+hw4/
+hw7/
 lab2/
+*/*.gz
 example/
 exercise/
+proj/docs/elas*
+proj/model/
+proj/src/spacy/plot/
+
 */data
 */.RData
 */.Rhistory

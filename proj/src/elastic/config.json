@@ -1,0 +1,7 @@
+{
+    "elasticsearch_host": "https://localhost:8080",
+    "elasticsearch_verify_certs": false,
+    "elasticsearch_index_name": "ukraine-data-lite",
+    "elasticsearch_timeout_secs": 120,
+    "log_level": "WARNING"
+}
