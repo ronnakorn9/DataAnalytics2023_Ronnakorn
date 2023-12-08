@@ -1,0 +1,18 @@
+python -m spacy init fill-config ./base_config/span_classify/gpu_large.cfg ./config/span_classify/gpu_large.cfg
+python -m spacy init fill-config ./base_config/span_classify/gpu_large_v2.cfg ./config/span_classify/gpu_large_v2.cfg
+python -m spacy init fill-config ./base_config/span_classify/gpu_large_v2_lowthres.cfg ./config/span_classify/gpu_large_v2_lowthres.cfg
+python -m spacy init fill-config ./base_config/span_classify/gpu_large_v3.cfg ./config/span_classify/gpu_large_v3.cfg
+python -m spacy init fill-config ./base_config/span_classify/gpu_large_v3_lowthres.cfg ./config/span_classify/gpu_large_v3_lowthres.cfg
+python -m spacy init fill-config ./base_config/span_classify/gpu_large_v4_0.2.cfg ./config/span_classify/gpu_large_v4_0.2.cfg
+
+python -m spacy train ./config/span_classify/gpu_large_v2.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v2
+python -m spacy train ./config/span_classify/gpu_large_v3.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v3
+python -m spacy train ./config/span_classify/gpu_large_v2_lowthres.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v2_lowthres
+python -m spacy train ./config/span_classify/gpu_large_v3_lowthres.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v3_lowthres
+
+python -m spacy train ./config/span_classify/gpu_large_v4_0.1.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v4_0.1
+python -m spacy train ./config/span_classify/gpu_large_v4_0.2.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v4_0.2
+# to do
+python -m spacy train ./config/span_classify/gpu_large_v5_0.1.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v5_0.1
+python -m spacy train ./config/span_classify/gpu_large_v5_0.2.cfg  --paths.train ./data/converted/sem_eval_task6/training_set_task2.spacy --paths.dev ./data/converted/sem_eval_task6/dev_set_task2.spacy --gpu-id 0 --output ./model/span_classify/gpu_large_v5_0.2
+
