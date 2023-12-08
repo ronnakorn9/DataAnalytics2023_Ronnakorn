@@ -12,13 +12,16 @@ folds <- cvFolds(nrow(coleman), K = 5, R = 10)
 fitLts50 <- ltsReg(Y ~ ., data = coleman, alpha = 0.5)
 cvFitLts50 <- cvLts(fitLts50, cost = rtmspe, folds = folds,
 fit = "both", trim = 0.1)
+
 # 75% subsets
 fitLts75 <- ltsReg(Y ~ ., data = coleman, alpha = 0.75)
 cvFitLts75 <- cvLts(fitLts75, cost = rtmspe, folds = folds,
 fit = "both", trim = 0.1)
+
 # combine results into one object
 cvFitsLts <- cvSelect("0.5" = cvFitLts50, "0.75" = cvFitLts75)
 cvFitsLts
+
 # "cv" object
 ncv(cvFitLts50)
 nfits(cvFitLts50)
@@ -26,6 +29,7 @@ cvNames(cvFitLts50)
 cvNames(cvFitLts50) <- c("improved", "initial")
 fits(cvFitLts50)
 cvFitLts50
+
 # "cvSelect" object
 ncv(cvFitsLts)
 nfits(cvFitsLts)

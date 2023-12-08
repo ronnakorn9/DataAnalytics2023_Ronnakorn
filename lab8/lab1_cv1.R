@@ -18,7 +18,7 @@ cvTool(call, data = coleman, y = coleman$Y, cost = rtmspe, folds = folds, costAr
 
 
 #look at cvfits, use densityplot, 
-tuning <- list(tuning.psi=seq(2., 6., 20))
+tuning <- list(tuning.psi=seq(1, 10., length.out = 100))
 cvFitsLmrob <- cvTuning(call, data = coleman, y = coleman$Y, tuning = tuning, cost = rtmspe, folds = folds, costArgs = list(trim = 0.1))
 # look at output
 cvFitsLmrob
